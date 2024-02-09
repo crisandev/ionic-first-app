@@ -5,7 +5,7 @@ import { ellipse, square, triangle } from "ionicons/icons";
 import Home from "./pages/Home/Home";
 import Adding from "./pages/Adding/Adding";
 import NumbersToLetters from "./pages/NumberToLetters/NumberToLetters";
-import Multiply from "./pages/NumberToLetters/NumberToLetters";
+import Multiply from "./pages/Multiply/Multiply";
 import PersonalExperience from "./pages/PersonalExperience/PersonalExperience";
 
 /* Core CSS required for Ionic components to work properly */
@@ -40,7 +40,7 @@ const App: React.FC = () => (
           <Route exact path="/adding">
             <Adding />
           </Route>
-          <Route path="/multiply">
+          <Route exact path="/multiply">
             <Multiply />
           </Route>
           <Route path="/number-to-letters">
@@ -59,11 +59,11 @@ const App: React.FC = () => (
             <IonLabel>Tab 1</IonLabel>
           </IonTabButton>
           <IonTabButton tab="adding" href="/adding">
-            <IonIcon aria-hidden="true" icon={ellipse} />
+            <IonIcon aria-hidden="false" icon={ellipse} />
             <IonLabel>Tab 2</IonLabel>
           </IonTabButton>
           <IonTabButton tab="multiply" href="/multiply">
-            <IonIcon aria-hidden="true" icon={square} />
+            <IonIcon aria-hidden="false" icon={square} />
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
           <IonTabButton tab="numbers-to-letters" href="/number-to-letters">

@@ -1,6 +1,6 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../../components/ExploreContainer';
-import './Home.css';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import ExploreContainer from "../../components/ExploreContainer";
+import "./Home.css";
 
 const Home: React.FC = () => {
   return (
@@ -11,12 +11,15 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <section>
+          <div>
+            <img src="/images/profile-image.jpg" alt="Profile Photo" width={100} />
+          </div>
+          <div>
+            <h1>Cristian Eulises Sanchez Ramirez</h1>
+            <p>scristianeulises@gmail.com</p>
+          </div>
+        </section>
       </IonContent>
     </IonPage>
   );
