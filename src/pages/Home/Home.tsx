@@ -4,18 +4,18 @@ import "./Home.css";
 
 const Home: React.FC = () => {
   return (
-    <IonPage>
+    <IonPage className="center">
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle style={{textAlign: "center"}}>Inicio</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <section>
-          <div>
+        <section className="center">
+          <div className="image">
             <img src="/images/profile-image.jpg" alt="Profile Photo" width={100} />
           </div>
-          <div>
+          <div className="text">
             <h1>Cristian Eulises Sanchez Ramirez</h1>
             <p>scristianeulises@gmail.com</p>
           </div>

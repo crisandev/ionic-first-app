@@ -1,7 +1,7 @@
 import { Redirect, Route } from "react-router-dom";
 import { IonApp, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { ellipse, square, triangle } from "ionicons/icons";
+import { calculator, logoYoutube, person, add, text } from "ionicons/icons";
 import Home from "./pages/Home/Home";
 import Adding from "./pages/Adding/Adding";
 import NumbersToLetters from "./pages/NumberToLetters/NumberToLetters";
@@ -55,28 +55,24 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonIcon aria-hidden="true" icon={person} />
+            <IonLabel>Inicio</IonLabel>
           </IonTabButton>
           <IonTabButton tab="adding" href="/adding">
-            <IonIcon aria-hidden="false" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="multiply" href="/multiply">
-            <IonIcon aria-hidden="false" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonIcon aria-hidden="false" icon={add} />
+            <IonLabel>Sumadora</IonLabel>
           </IonTabButton>
           <IonTabButton tab="numbers-to-letters" href="/number-to-letters">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="personal-experience" href="/personal-experience">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonIcon aria-hidden="true" icon={text} />
+            <IonLabel>Números a letras</IonLabel>
           </IonTabButton>
           <IonTabButton tab="multiply" href="/multiply">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonIcon aria-hidden="false" icon={calculator} />
+            <IonLabel>Multiplicadora</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="personal-experience" href="/personal-experience">
+            <IonIcon aria-hidden="true" icon={logoYoutube} />
+            <IonLabel>Mi Experiencia</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

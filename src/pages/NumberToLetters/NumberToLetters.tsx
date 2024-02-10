@@ -5,7 +5,7 @@ import { numbers } from "./numbers";
 import { useState } from "react";
 
 const NumberToLetters: React.FC = () => {
-  const [numberWord, setNumberWord] = useState("");
+  const [numberWord, setNumberWord] = useState("'Ingrese un valor'");
   const [number, setNumber] = useState("");
 
   const handleChangeNumber = (e: CustomEvent) => {
@@ -13,11 +13,14 @@ const NumberToLetters: React.FC = () => {
   };
 
   const handleClickNumberWord = () => {
-    const value = numbers[Number(number)]
-    setNumberWord(value)
+    if(Number(number) > 1000){
+      setNumberWord("El número debe de estar en el rango 1 - 1000 ")
+      return;
+    }
 
-  }
-  
+    const value = numbers[Number(number)];
+    setNumberWord(value);
+  };
 
   return (
     <IonPage>
@@ -27,12 +30,14 @@ const NumberToLetters: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonInput value={number} onIonChange={handleChangeNumber} label="Outline input" labelPlacement="floating" fill="outline" placeholder="Enter text" style={{ maxWidth: "140px" }}></IonInput>
-        <p>Nombre del número: {numberWord}</p>
-
-        <IonButton color="tertiary" onClick={handleClickNumberWord}>
-          Buscar nombre del número
-        </IonButton>
+        <div className="containerNumToLetters">
+          <IonInput className="input" value={number} onIonChange={handleChangeNumber} label="Ingrese un número" labelPlacement="floating" fill="outline" placeholder="Número" style={{ maxWidth: "160px" }}></IonInput>
+          <IonButton color="tertiary" onClick={handleClickNumberWord}>
+            Buscar nombre del número
+          </IonButton>
+          <p>Nombre del número</p>
+          <p>{numberWord ? numberWord : "'Valor incorrecto'"}</p>
+        </div>
       </IonContent>
     </IonPage>
   );
