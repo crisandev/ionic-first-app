@@ -1,0 +1,29 @@
+.containerMultiply{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.generateTable{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+.table{
+    margin: 40px;
+}
+
+.table div{
+    background-color: #4a4747;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.table p{
+    height: 6px;
+    word-spacing: 16px;
+}

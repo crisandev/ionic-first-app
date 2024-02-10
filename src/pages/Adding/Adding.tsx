@@ -46,7 +46,7 @@ const Adding: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle style={{textAlign: "center"}}>Sumadora</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

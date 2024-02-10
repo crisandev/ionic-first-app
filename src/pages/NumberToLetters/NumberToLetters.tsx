@@ -26,7 +26,7 @@ const NumberToLetters: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle style={{textAlign: "center"}}>Convertir Números a Letras</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
