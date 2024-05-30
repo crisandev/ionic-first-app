@@ -56,7 +56,7 @@ const Multiply: React.FC = () => {
               {values.map((value: number, index: number) => {
                 return (
                   <p key={index}>
-                    1 x {index + 1} = {(index + 1) * value}
+                    {index + 1} x {number} = {(index + 1) * value}
                   </p>
                 );
               })}
